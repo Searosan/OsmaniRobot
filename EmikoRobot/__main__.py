@@ -83,12 +83,12 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
+✪ Waxaan ahay bot ka maamulka groups ka [✨](https://telegra.ph/file/9affea74c9eed1b4a1963.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
 ────────────────────────
-✪ Hit /help to see my available commands.
+✪ Ku dhufo /help si aad u aragto amarradayda diyaarsan.
 """
 
 buttons = [
@@ -109,13 +109,14 @@ buttons = [
 
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+Guji badhanka hoose si aad u hesho sharaxaad ku saabsan amarka gaarka ah."""
 
+EMI_IMG = "https://telegra.ph/file/09d6c7cc130bec60767f2.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @excrybaby \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """Hey, ku faraxsanahay inaan maqlo inaad rabto inaad wax ku tabarucdo Botka!
+ Waxaad ku taageeri kartaa mashruuca adigoo la xiriiraya @ribajosmani \
+ Taageeradu had iyo jeer maaha dhaqaale! \
+ Kuwa aan bixin karin taageero lacageed waa lagu soo dhaweynayaa inay naga caawiyaan horumarinta bot-ka ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -230,13 +231,13 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
+            f"👋Hi, waxan ahay {dispatcher.bot.first_name}. Kulan wanaagsan.",
             parse_mode=ParseMode.HTML
        )
 
 
 def error_handler(update, context):
-    """Log the error and send a telegram message to notify the developer."""
+    """Gal khaladka oo dir fariin telegram si aad u ogeysiiso horumariyaha bot-ka."""
     # Log the error before we do anything else, so we can see it even if something breaks.
     LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
 
@@ -361,7 +362,7 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text=f"๏ I'm *{dispatcher.bot.first_name}*, a powerful group management bot built to help you manage your group easily."
+            text=f"๏ Waxaan ahay *{dispatcher.bot.first_name}*, bot maamul kooxeed awood leh oo loo dhisay inuu kaa caawiyo inaad si fudud u maamusho kooxdaada."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -383,7 +384,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/kennedy-ex/EmikoRobot"),
+                    InlineKeyboardButton(text="Global Bot", url="https://t.me/meribaj"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
@@ -394,7 +395,7 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
+            text=f"*๏ Aynu hadda ka dhigno kooxdaada waxoogaa waxtar leh*"
             f"\nCongragulations, {dispatcher.bot.first_name} now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
@@ -422,14 +423,14 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*๏ Emiko support chats*"
+            text="*๏ Osmani support chats*"
             f"\nJoin My Support Group/Channel for see or report a problem on {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/emikosupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton(text="Support", url="t.me/osmanigroupbot"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/teamosmani"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
@@ -448,12 +449,12 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
-                    InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
+                    InlineKeyboardButton(text="Ribaj", url="https://github.com/Ribaj"),
+                    InlineKeyboardButton(text="OsmaniBot", url="https://github.com/jaabirosmani"),
                  ],
                  [
-                    InlineKeyboardButton(text="Feri", url="https://github.com/FeriEXP"),
-                    InlineKeyboardButton(text="riz-ex", url="https://github.com/riz-ex"),
+                    InlineKeyboardButton(text="Rosan", url="https://github.com/searosan"),
+                    InlineKeyboardButton(text="Test Osmani", url="https://github.com/testosmani"),
                  ],
                  [
                     InlineKeyboardButton(text="Anime Kaizoku", url="https://github.com/animekaizoku"),
