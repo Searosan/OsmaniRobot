@@ -83,7 +83,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ Waxaan ahay bot ka maamulka groups ka [✨](https://telegra.ph/file/9affea74c9eed1b4a1963.jpg)
+✪ Waxaan ahay *{}* bot ka maamulka groups ka [✨](https://telegra.ph/file/9affea74c9eed1b4a1963.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -457,18 +457,15 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Test Osmani", url="https://github.com/testosmani"),
                  ],
                  [
-                    InlineKeyboardButton(text="Anime Kaizoku", url="https://github.com/animekaizoku"),
-                    InlineKeyboardButton(text="TheGhost Hunter", url="https://github.com/HuntingBots"),
+                    InlineKeyboardButton(text="	Osmani Project ", url="https://github.com/OsmaniPro"),
+                    InlineKeyboardButton(text="	Rosan Lent", url="https://github.com/rosanlent"),
                  ],
                  [
-                    InlineKeyboardButton(text="Inuka Asith", url="https://github.com/inukaasith"),
-                    InlineKeyboardButton(text="Noob-Kittu", url="https://github.com/noob-kittu"),
+                    InlineKeyboardButton(text="Rosan Test", url="https://github.com/Test-osmani"),
+                    InlineKeyboardButton(text="saddami", url="https://github.com/saddami-Bot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Queen Arzoo", url="https://github.com/QueenArzoo"),
-                    InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
-                 ],
-                 [
+                   
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
                  ]
                 ]
@@ -757,7 +754,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1866066766:
+        if OWNER_ID != 1008271006:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
